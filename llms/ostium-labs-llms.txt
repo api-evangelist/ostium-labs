@@ -1,0 +1,85 @@
+# Ostium
+
+## Docs
+
+- [GET /v1/prices](https://docs.ostium.com/developer/builder-api/get-prices.md): Fetch the current Ostium live price snapshot directly from the Builder API.
+- [Builder API Overview](https://docs.ostium.com/developer/builder-api/overview.md): Use the Builder API directly for live prices, candles, and streaming, or consume the same data through the Builder SDK.
+- [POST /v1/pimlico/sponsor](https://docs.ostium.com/developer/builder-api/pimlico-sponsor.md): Default Pimlico-compatible sponsorship endpoints used by SDK gasless modes.
+- [POST /v1/ohlc](https://docs.ostium.com/developer/builder-api/post-ohlc.md): Fetch OHLC candles directly from the Builder API.
+- [POST /v1/trade](https://docs.ostium.com/developer/builder-api/post-trade.md): Report an Ostium trading transaction hash to the Builder API for SDK usage attribution.
+- [/v1/subgraph/gn](https://docs.ostium.com/developer/builder-api/subgraph.md): Default mainnet GraphQL subgraph endpoint used by @ostium/builder-sdk read methods.
+- [WS /v1/prices/stream](https://docs.ostium.com/developer/builder-api/ws-prices-stream.md): Subscribe to live Ostium price updates directly through the Builder API WebSocket feed.
+- [Getting keys from the App](https://docs.ostium.com/developer/builders/getting-keys-from-the-app.md): Use the Ostium app to generate a delegated gasless SDK account and export the delegate private key for Builder SDK integrations.
+- [Builder Set Up](https://docs.ostium.com/developer/builders/overview.md): Set up an Ostium builder integration, configure builder fees, and choose the right client mode for your application.
+- [React Example](https://docs.ostium.com/developer/builders/react-quickstart.md): Example React integration using Ostium transaction builders, order polling, and live position updates.
+- [Client Configuration](https://docs.ostium.com/developer/client-modes/configuration.md): Every parameter you can pass when initializing an Ostium SDK client — shared options, per-mode fields, and build-only variants.
+- [Delegated + Gasless](https://docs.ostium.com/developer/client-modes/delegated-and-gasless.md): Backend-controlled delegated execution with Safe-based gasless submission in the Ostium SDK.
+- [Delegated + Self](https://docs.ostium.com/developer/client-modes/delegated-and-self.md): Backend-controlled delegated execution where a delegate EOA signs and pays gas on behalf of a trader.
+- [Client Modes](https://docs.ostium.com/developer/client-modes/overview.md): Choose the correct Ostium SDK mode based on who owns funds, who signs, and whether your app submits transactions or only builds them.
+- [Read-only](https://docs.ostium.com/developer/client-modes/read-only.md): Use createReadOnly when your app only needs market or account data and does not need to build or submit transactions.
+- [Self + Gasless](https://docs.ostium.com/developer/client-modes/self-and-gasless.md): Trader-owned positions with trader signatures and Safe-based gasless submission in the Ostium SDK.
+- [Self + Self](https://docs.ostium.com/developer/client-modes/self-and-self.md): Trader-owned, trader-signed, directly submitted transactions with the Ostium SDK.
+- [Testnet](https://docs.ostium.com/developer/client-modes/testnet.md): Use the Ostium SDK on Arbitrum Sepolia by enabling the testnet option on any client mode.
+- [approveUsdc](https://docs.ostium.com/developer/reference/approve-usdc.md): Approve TradingStorage to spend trader USDC through the Ostium Builder SDK.
+- [cancelOrder](https://docs.ostium.com/developer/reference/cancel-order.md): Cancel pending limit, market open, or market close orders with the Ostium Builder SDK.
+- [checkUsdcAllowance](https://docs.ostium.com/developer/reference/check-usdc-allowance.md): Check whether the connected trader has enough USDC allowance for a required amount.
+- [closeTrade](https://docs.ostium.com/developer/reference/close-trade.md): Fully or partially close an Ostium position with the Builder SDK.
+- [getAllPrices](https://docs.ostium.com/developer/reference/get-all-prices.md): Fetch current mid, bid, and ask prices for all Ostium pairs.
+- [getBalances](https://docs.ostium.com/developer/reference/get-balances.md): Fetch USDC balance, ETH balance, and USDC allowance for an Ostium trader.
+- [getBuilderOrders](https://docs.ostium.com/developer/reference/get-builder-orders.md): Fetch orders routed through a builder, including sibling close, TP, and SL orders on the same positions.
+- [getCandles](https://docs.ostium.com/developer/reference/get-candles.md): Fetch OHLC candle data for an Ostium pair.
+- [getFills](https://docs.ostium.com/developer/reference/get-fills.md): Fetch executed Ostium fills for one trader or across all traders.
+- [getFillsByTime](https://docs.ostium.com/developer/reference/get-fills-by-time.md): Fetch executed Ostium fills within a time range.
+- [getOpenOrders](https://docs.ostium.com/developer/reference/get-open-orders.md): Fetch active Ostium limit orders for a trader.
+- [getOpenPositions](https://docs.ostium.com/developer/reference/get-open-positions.md): Fetch live Ostium positions, margin summary, and withdrawable collateral.
+- [getOrders](https://docs.ostium.com/developer/reference/get-orders.md): Fetch pending, executed, or cancelled Ostium orders by hash, id, or recent trader activity.
+- [getPairs](https://docs.ostium.com/developer/reference/get-pairs.md): Fetch all Ostium pairs, leverage limits, live prices, and market-state fields.
+- [getSimOrderbook](https://docs.ostium.com/developer/reference/get-sim-orderbook.md): Fetch a synthetic bid/ask orderbook for an Ostium pair.
+- [getSimSlippage](https://docs.ostium.com/developer/reference/get-sim-slippage.md): Fetch simulated long and short slippage for Ostium pairs at different notionals.
+- [getSmartAccountAddress](https://docs.ostium.com/developer/reference/get-smart-account-address.md): Return the Safe smart-account address used by gasless Ostium client modes.
+- [getTraderAddress](https://docs.ostium.com/developer/reference/get-trader-address.md): Return the connected trader address for a write-enabled Ostium client.
+- [isReadOnly](https://docs.ostium.com/developer/reference/is-read-only.md): Check whether an Ostium client was created in read-only mode.
+- [modifyOrder](https://docs.ostium.com/developer/reference/modify-order.md): Update take profit, stop loss, or limit-order price on Ostium with the Builder SDK.
+- [openTrade](https://docs.ostium.com/developer/reference/open-trade.md): Open market, limit, or stop trades on Ostium with the Builder SDK.
+- [removeDelegate](https://docs.ostium.com/developer/reference/remove-delegate.md): Remove the currently registered delegate on Ostium through the Builder SDK.
+- [setDelegate](https://docs.ostium.com/developer/reference/set-delegate.md): Register a delegate address on Ostium through the Builder SDK.
+- [setupGaslessDelegation](https://docs.ostium.com/developer/reference/setup-gasless-delegation.md): Register the Safe delegate required for self gasless Ostium trading.
+- [streamAccountUpdates](https://docs.ostium.com/developer/reference/stream-account-updates.md): Stream low-latency account confirmations, pending orders, active limits, and open trades.
+- [streamPositionUpdates](https://docs.ostium.com/developer/reference/stream-position-updates.md): Subscribe to live price-driven changes for an existing open positions payload.
+- [streamPrices](https://docs.ostium.com/developer/reference/stream-prices.md): Open a live WebSocket price stream from the Ostium Builder SDK.
+- [transaction builders](https://docs.ostium.com/developer/reference/transaction-builders.md): Build unsigned Ostium SDK transactions with the get*Tx helpers for EOA or Safe-based client applications.
+- [updateCollateral](https://docs.ostium.com/developer/reference/update-collateral.md): Add or remove collateral from an Ostium position with the Builder SDK.
+- [Changelog](https://docs.ostium.com/developer/sdk/changelog.md): Versioned changes for @ostium/builder-sdk.
+- [Errors](https://docs.ostium.com/developer/sdk/errors.md): Reference for Ostium SDK error classes and error codes.
+- [Ostium API & SDK](https://docs.ostium.com/developer/sdk/overview.md): The official Ostium TypeScript SDK and Builder API for reading market data, streaming prices, and placing trades programmatically on Ostium.
+- [Trader Quickstart](https://docs.ostium.com/developer/traders/approvals-and-first-trade.md): Approve USDC and place a first Ostium trade with the Builder SDK.
+- [Traders Overview](https://docs.ostium.com/developer/traders/overview.md): Start here if you are using the Ostium Builder SDK to automate trading, run bots, or manage positions programmatically.
+- [How Ostium Works](https://docs.ostium.com/protocol/how-ostium-works.md): A comprehensive explanation of the Ostium protocol: the onchain vault, the offchain hedge, how they settle daily, and the three core participants.
+- [Smart Contract Audits](https://docs.ostium.com/protocol/security/audits.md): Comprehensive security audits of Ostium's smart contracts by Zellic, ThreeSigma, and Pashov
+- [Support & Community](https://docs.ostium.com/traders/community/support.md): Where to get help, report issues, and stay connected as Ostium evolves
+- [Connect Your Account](https://docs.ostium.com/traders/getting-started/connect-account.md): Get started on Ostium with email login or Web3 wallet. Choose your preferred connection method and enable 1-click trading.
+- [Fund Your Account](https://docs.ostium.com/traders/getting-started/fund-account.md): Get USDC on Arbitrum to start trading. Your funds stay in your wallet; the Ostium smart contracts lock margin when you open a trade and return it when you close.
+- [Fees](https://docs.ostium.com/traders/reference/fees.md): Every cost you'll pay trading on Ostium: opening, oracle, rollover, and liquidation fees in one page.
+- [Glossary](https://docs.ostium.com/traders/reference/glossary.md): Key terms and definitions used throughout the Ostium protocol documentation
+- [Markets](https://docs.ostium.com/traders/reference/markets.md): All 75 perpetual instrument trading pairs on Ostium across Stocks, ETFs, Commodities, Indices, Forex, and Crypto, with leverage caps, fees, and trading hours.
+- [Closing a Trade](https://docs.ostium.com/traders/trading/closing-a-trade.md): Manual closes, automated TP/SL, liquidation, and what happens to your collateral on each path.
+- [Liquidation](https://docs.ostium.com/traders/trading/liquidation.md): How liquidation works on Ostium: thresholds, formulas, worked examples, and how to avoid it.
+- [Managing Positions](https://docs.ostium.com/traders/trading/managing-positions.md): Adjustments to open positions: TP/SL bounds, collateral mechanics, and worked examples.
+- [Opening a Trade](https://docs.ostium.com/traders/trading/opening-a-trade.md): Walkthrough for opening your first position on Ostium, with fee math and a worked example.
+- [Order Types](https://docs.ostium.com/traders/trading/order-types.md): Reference for Market, Limit, Stop, TP, SL, Liquidation, and Close Market orders on Ostium.
+- [Stocks: Day Trading](https://docs.ostium.com/traders/trading/stocks-day-trading.md): Day-trading rules for stocks on Ostium: leverage tiers, auto-close timing, and overnight transitions.
+- [Welcome to Ostium](https://docs.ostium.com/traders/welcome.md): What Ostium is, how it works, and where to start trading.
+- [How to Deposit](https://docs.ostium.com/vault/getting-started/deposit.md): Deposit USDC and receive OLP tokens representing your share of the vault
+- [How to Withdraw](https://docs.ostium.com/vault/getting-started/withdraw.md): Request withdrawal of OLP and redeem USDC from the vault
+- [Vault Overview](https://docs.ostium.com/vault/overview.md): How the Ostium Vault settles every trade onchain, and where OLP sits in the protocol's loss order.
+- [OLP Token](https://docs.ostium.com/vault/reference/olp-token.md): Reference for OLP pricing, share mechanics, deposits, withdrawals, and yield.
+
+## OpenAPI Specs
+
+- [openapi](https://docs.ostium.com/api-reference/openapi.json)
+
+## Optional
+
+- [Website](https://ostium.com)
+- [Blog](https://www.ostium.com/blog)
+- [X/Twitter](https://www.x.com/Ostium)

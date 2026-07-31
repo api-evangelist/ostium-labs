@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.ostium.com/developer/client-modes/testnet
+summary: >-
+  Ostium exposes a full testnet on Arbitrum Sepolia. Enabling it flips the SDK's
+  smart-contract addresses, subgraph endpoint, Builder API endpoint and default
+  Pimlico gasless sponsor URL to their Sepolia equivalents.
+testnet:
+  chain: Arbitrum Sepolia
+  chain_id: 421614
+  enable: "Pass testnet: true when instantiating any OstiumClient factory."
+  example: >-
+    const client = await OstiumClient.createDelegatedAndGasless({
+    delegatePrivateKey: process.env.DELEGATE_PRIVATE_KEY, traderAddress:
+    '0xTraderAddress', testnet: true })
+  auto_switched:
+  - smart contract addresses
+  - subgraph endpoint
+  - Builder API endpoint
+  - default Pimlico sponsor URL (Sepolia)
+  overridable: [rpcUrl, subgraphUrl, builderApiUrl, pimlicoUrl]
+mainnet:
+  chain: Arbitrum One
+  chain_id: 42161
+notes: >-
+  The docs do not publish a specific test USDC faucet, fixed test contract
+  addresses, or magic test token values; ensure the trader account, USDC token
+  approvals and delegation setup all operate on the same (testnet) network.

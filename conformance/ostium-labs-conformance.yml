@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.ostium.com/llms.txt + docs
+standards:
+- id: graphql
+  conforms: true
+  evidence: Public GraphQL subgraph endpoint /v1/subgraph/gn used by SDK read methods.
+- id: websocket-streaming
+  conforms: true
+  evidence: WS /v1/prices/stream plus streamPrices/streamAccountUpdates/streamPositionUpdates.
+- id: rest
+  conforms: true
+  evidence: Builder API REST endpoints GET /v1/prices, POST /v1/ohlc, POST /v1/trade.
+- id: erc4626-style-vault
+  conforms: partial
+  evidence: OLP vault issues share tokens for USDC deposits (deposit/withdraw share mechanics).
+- id: oauth2
+  conforms: false
+  evidence: Self-custodial wallet-signature auth; no OAuth2.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors surface as typed SDK error classes/codes, not application/problem+json.
+- id: idempotency
+  conforms: false
+  evidence: On-chain nonce/contract-state replay safety rather than an HTTP idempotency key.
+compliance_note: >-
+  Ostium publishes independent smart-contract security audits (Zellic, ThreeSigma,
+  Pashov Audit Group) and runs an Immunefi bug bounty, but does not publish
+  enterprise compliance certifications (SOC 2 / ISO 27001 / PCI DSS), so no
+  Compliance pointer is asserted. See security/ostium-labs-trust-center.yml.

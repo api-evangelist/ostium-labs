@@ -1,0 +1,59 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://docs.ostium.com/developer/reference (Builder SDK operation surface)
+server:
+  name: ostium
+  transport: http
+  url: null
+notes: >-
+  No official hosted/remote Ostium MCP server was found. The tool list below is a
+  candidate derived from the documented @ostium/builder-sdk read/write operation
+  surface, suitable for building a first MCP wrapper. Write tools act on-chain and
+  require a write-enabled client mode (trader signature or delegate key).
+tools:
+- name: get_pairs
+  description: Fetch all Ostium pairs, leverage limits, live prices and market-state fields.
+  source_operation: getPairs
+- name: get_all_prices
+  description: Fetch current mid, bid and ask prices for all Ostium pairs.
+  source_operation: getAllPrices
+- name: get_candles
+  description: Fetch OHLC candle data for an Ostium pair.
+  source_operation: getCandles
+- name: get_sim_orderbook
+  description: Fetch a synthetic bid/ask orderbook for an Ostium pair.
+  source_operation: getSimOrderbook
+- name: get_sim_slippage
+  description: Fetch simulated long/short slippage for pairs at different notionals.
+  source_operation: getSimSlippage
+- name: get_open_positions
+  description: Fetch live positions, margin summary and withdrawable collateral for a trader.
+  source_operation: getOpenPositions
+- name: get_open_orders
+  description: Fetch active limit orders for a trader.
+  source_operation: getOpenOrders
+- name: get_orders
+  description: Fetch pending, executed or cancelled orders by hash, id or recent activity.
+  source_operation: getOrders
+- name: get_fills
+  description: Fetch executed fills for one trader or across all traders.
+  source_operation: getFills
+- name: get_balances
+  description: Fetch USDC balance, ETH balance and USDC allowance for a trader.
+  source_operation: getBalances
+- name: open_trade
+  description: Open a market, limit or stop trade (on-chain, write mode required).
+  source_operation: openTrade
+- name: close_trade
+  description: Fully or partially close a position (on-chain, write mode required).
+  source_operation: closeTrade
+- name: modify_order
+  description: Update take profit, stop loss or limit-order price (write mode required).
+  source_operation: modifyOrder
+- name: cancel_order
+  description: Cancel a pending limit, market-open or market-close order (write mode required).
+  source_operation: cancelOrder
+- name: update_collateral
+  description: Add or remove collateral from a position (write mode required).
+  source_operation: updateCollateral

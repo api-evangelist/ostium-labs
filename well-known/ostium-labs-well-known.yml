@@ -1,0 +1,17 @@
+generated: '2026-07-20'
+method: searched
+source: live probe of /.well-known/* on Ostium hosts
+host: https://builder.ostium.io
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+notes: >-
+  No /.well-known/ discovery documents are published on the Builder API host.
+  Ostium authenticates via wallet signatures / delegate keys rather than OAuth/OIDC,
+  so OIDC and OAuth authorization-server discovery are not applicable.

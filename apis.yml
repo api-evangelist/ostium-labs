@@ -1,8 +1,16 @@
 aid: ostium-labs
 name: Ostium Labs
-description: Ostium Labs is a company surfaced as a portfolio company of general-catalyst and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Ostium is a decentralized perpetual-futures exchange that lets traders access
+  global real-world-asset markets — stocks, ETFs, commodities, indices, forex and
+  crypto — directly from a self-custodial crypto wallet, with leverage and no
+  broker or intermediary. Built on Arbitrum, the protocol pairs an on-chain OLP
+  vault with an off-chain hedge that settle daily across three core participants.
+  For developers, Ostium ships an official TypeScript Builder SDK (@ostium/builder-sdk)
+  and a Python SDK (ostium-python-sdk) plus a public Builder API for live prices,
+  OHLC candles and WebSocket price/account streaming, backed by a GraphQL subgraph.
+  Client modes span read-only, trader-signed, and backend-controlled delegated /
+  Safe-based gasless execution, with a testnet on Arbitrum Sepolia.
 url: https://raw.githubusercontent.com/api-evangelist/ostium-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,14 +18,153 @@ x-backed-by:
 - general-catalyst
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://www.ostium.com/favicon.ico
 tags:
 - Company
-apis: []
+- Perpetual Futures
+- Decentralized Finance
+- DeFi
+- Trading
+- Real World Assets
+- Derivatives
+- Arbitrum
+- Blockchain
+- Web3
+- Market Data
+- SDK
+apis:
+- name: Ostium Builder API
+  description: >-
+    Public Builder API and TypeScript/Python SDK surface for reading Ostium market
+    data (pairs, prices, OHLC candles), streaming live prices and account/position
+    updates over WebSocket, and building/submitting trades on the Ostium perpetuals
+    protocol via read-only, self-signed, delegated and Safe-based gasless client modes.
+  humanURL: https://docs.ostium.com/developer/sdk/overview
+  baseURL: https://builder.ostium.io
+  tags:
+  - Trading
+  - Market Data
+  - Streaming
+  - Perpetual Futures
+  - DeFi
+  properties:
+  - type: Documentation
+    url: https://docs.ostium.com/developer/sdk/overview
+  - type: APIReference
+    url: https://docs.ostium.com/developer/builder-api/overview
+  - type: GettingStarted
+    url: https://docs.ostium.com/developer/traders/approvals-and-first-trade
+  - type: Authentication
+    url: authentication/ostium-labs-authentication.yml
+  - type: ErrorCatalog
+    url: errors/ostium-labs-error-codes.yml
+  - type: Conventions
+    url: conventions/ostium-labs-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/ostium-labs-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/ostium-labs-changelog.yml
+  - type: Sandbox
+    url: sandbox/ostium-labs-sandbox.yml
+  - type: DataModel
+    url: data-model/ostium-labs-data-model.yml
+  - type: Conformance
+    url: conformance/ostium-labs-conformance.yml
+  - type: AsyncAPI
+    url: asyncapi/ostium-labs-prices-asyncapi.yml
+  - type: MCPServer
+    url: mcp/ostium-labs-mcp.yml
+common:
+- type: Website
+  url: https://www.ostium.com
+- type: DeveloperPortal
+  url: https://docs.ostium.com/developer/sdk/overview
+- type: Documentation
+  url: https://docs.ostium.com
+- type: APIReference
+  url: https://docs.ostium.com/developer/builder-api/overview
+- type: GettingStarted
+  url: https://docs.ostium.com/developer/traders/approvals-and-first-trade
+- type: Blog
+  url: https://www.ostium.com/blog
+- type: GitHubOrganization
+  url: https://github.com/0xOstium
+- type: Support
+  url: https://docs.ostium.com/traders/community/support
+- type: SignUp
+  url: https://app.ostium.com
+- type: Pricing
+  url: https://docs.ostium.com/traders/reference/fees
+- type: TermsOfService
+  url: https://docs.ostium.com/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://docs.ostium.com/legal/privacy-policy
+- type: X
+  url: https://x.com/ostium
+- type: Discord
+  url: https://discord.com/invite/ostiumlabs
+- type: ChangeLog
+  url: https://docs.ostium.com/developer/sdk/changelog
+- type: LLMsTxt
+  url: llms/ostium-labs-llms.txt
+- type: Packages
+  url: packages/ostium-labs-packages.yml
+- type: SDKs
+  url: packages/ostium-labs-packages.yml
+- type: WellKnown
+  url: well-known/ostium-labs-well-known.yml
+- type: Authentication
+  url: authentication/ostium-labs-authentication.yml
+- type: Conventions
+  url: conventions/ostium-labs-conventions.yml
+- type: ErrorCatalog
+  url: errors/ostium-labs-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/ostium-labs-lifecycle.yml
+- type: ChangeLog
+  url: changelog/ostium-labs-changelog.yml
+- type: Sandbox
+  url: sandbox/ostium-labs-sandbox.yml
+- type: DataModel
+  url: data-model/ostium-labs-data-model.yml
+- type: Conformance
+  url: conformance/ostium-labs-conformance.yml
+- type: DomainSecurity
+  url: security/ostium-labs-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/ostium-labs-vulnerability-disclosure.yml
+- type: Security
+  url: https://immunefi.com/bug-bounty/ostium/
+- type: TrustCenter
+  url: security/ostium-labs-trust-center.yml
+- type: AsyncAPI
+  url: asyncapi/ostium-labs-prices-asyncapi.yml
+- type: MCPServer
+  url: mcp/ostium-labs-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 18
+  pass: local-v1

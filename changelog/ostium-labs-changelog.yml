@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.ostium.com/developer/sdk/changelog
+subject: "@ostium/builder-sdk"
+scheme: semver
+current_version: 0.5.0
+entries:
+- version: 0.4.1
+  date: '2026-06-14'
+  breaking: false
+  highlights:
+  - streamAccountUpdates() now accepts multiple trader addresses simultaneously, with snapshots keyed by normalized address.
+  - Added OstiumAccountUpdatesStream.users getter to retrieve subscribed addresses.
+  - Added optional user parameter to addOptimisticOpen() to attribute optimistic opens to specific addresses.
+- version: 0.4.0
+  date: '2026-06-11'
+  breaking: false
+  highlights:
+  - Added pagination support to getCandles().
+  - Added enhanced filtering to getOrders() and a new getBuilderOrders() method.
+  - Added builder, ntl (USD notional), trader and timestamp fields across multiple object types.
+  - Introduced account streaming via streamAccountUpdates() with low-latency confirmations and optimistic market-open overlays.
+  - Added market schedule information to pair data and background attribution for SDK usage.
+- version: 0.3.1
+  date: null
+  breaking: false
+  highlights:
+  - Prior published baseline version noted in the changelog.
+notes: >-
+  Versions 0.5.0 (npm dist-tag latest) is published; the dated changelog window
+  above reflects the most recent documented releases.

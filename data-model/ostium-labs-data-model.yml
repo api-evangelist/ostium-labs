@@ -1,0 +1,62 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.ostium.com/developer/reference + docs
+entities:
+- name: Pair
+  description: A tradeable perpetual instrument (75 markets across Stocks, ETFs, Commodities, Indices, Forex, Crypto) with leverage caps, fees and market hours.
+  key_operations: [getPairs, getAllPrices, getCandles, getSimOrderbook, getSimSlippage]
+- name: Price
+  description: Live mid/bid/ask snapshot for a pair; sourced from the Builder API and price stream.
+  key_operations: [getAllPrices, streamPrices]
+- name: Order
+  description: Pending/executed/cancelled order (market open, limit, stop, close, TP, SL) on a pair.
+  key_operations: [openTrade, modifyOrder, cancelOrder, getOrders, getOpenOrders, getBuilderOrders]
+- name: Position
+  description: A live open trade with margin summary and withdrawable collateral.
+  key_operations: [getOpenPositions, closeTrade, updateCollateral, streamPositionUpdates]
+- name: Fill
+  description: An executed fill for one trader or across all traders.
+  key_operations: [getFills, getFillsByTime]
+- name: Trader
+  description: The connected trader account (EOA or Safe smart account) holding USDC collateral.
+  key_operations: [getTraderAddress, getSmartAccountAddress, getBalances, approveUsdc, checkUsdcAllowance]
+- name: Delegate
+  description: A delegate address authorized to act on behalf of a trader in delegated client modes.
+  key_operations: [setDelegate, removeDelegate, setupGaslessDelegation]
+- name: OLP
+  description: Vault share token representing a depositor's stake in the Ostium liquidity vault.
+  key_operations: []
+relationships:
+- from: Order
+  to: Pair
+  type: belongs_to
+  via: pairId
+- from: Position
+  to: Pair
+  type: belongs_to
+  via: pairId
+- from: Position
+  to: Trader
+  type: belongs_to
+  via: trader
+- from: Order
+  to: Trader
+  type: belongs_to
+  via: trader
+- from: Fill
+  to: Order
+  type: belongs_to
+  via: orderId
+- from: Fill
+  to: Trader
+  type: belongs_to
+  via: trader
+- from: Trader
+  to: Position
+  type: has_many
+  via: trader
+- from: Trader
+  to: Delegate
+  type: has_one
+  via: delegate
+settlement_token: USDC

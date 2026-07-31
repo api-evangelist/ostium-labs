@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.ostium.com/developer/sdk/overview
+authentication:
+  style: wallet-signature / delegate-key / public-read
+  ref: authentication/ostium-labs-authentication.yml
+architecture:
+  pattern: build-vs-submit
+  description: >-
+    get*Tx() methods return unsigned transactions for external signing; write
+    methods sign and submit internally based on the configured client mode
+    (read-only, self-signed, delegated, Safe-based gasless).
+pagination:
+  style: cursor/offset
+  supported_operations: [getCandles, getOrders]
+  notes: >-
+    getCandles() supports pagination and getOrders() supports enhanced filtering
+    (added in @ostium/builder-sdk 0.4.0).
+streaming:
+  transport: websocket
+  ref: asyncapi/ostium-labs-prices-asyncapi.yml
+  operations: [streamPrices, streamAccountUpdates, streamPositionUpdates]
+  builder_api_channel: WS /v1/prices/stream
+idempotency:
+  supported: false
+  notes: >-
+    No documented HTTP Idempotency-Key contract. Write actions are on-chain
+    transactions/user-operations whose replay-safety is enforced by blockchain
+    nonces and contract state rather than an API idempotency key.
+error_envelope:
+  style: typed SDK error classes with machine-readable codes
+  ref: errors/ostium-labs-error-codes.yml
+versioning:
+  scheme: semver (SDK)
+  ref: changelog/ostium-labs-changelog.yml
+networks:
+  mainnet: {chain: Arbitrum One, chain_id: 42161}
+  testnet: {chain: Arbitrum Sepolia, chain_id: 421614}
+data_sources:
+  subgraph: /v1/subgraph/gn (GraphQL)
+  builder_api: https://builder.ostium.io
+settlement_token: USDC

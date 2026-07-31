@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: registry.npmjs.org + pypi.org
+packages:
+- language: typescript
+  registry: npm
+  name: "@ostium/builder-sdk"
+  url: https://www.npmjs.com/package/@ostium/builder-sdk
+  install: npm install @ostium/builder-sdk viem
+  version: 0.5.0
+  official: true
+  description: >-
+    Official Ostium TypeScript Builder SDK for reading market data, streaming
+    prices/accounts, and building/submitting trades across read-only, self-signed,
+    delegated and Safe-based gasless client modes.
+- language: python
+  registry: pypi
+  name: ostium-python-sdk
+  url: https://pypi.org/project/ostium-python-sdk/
+  install: pip install ostium-python-sdk
+  version: 3.3.0
+  official: true
+  repository: https://github.com/0xOstium/ostium-python-sdk
+  description: >-
+    Official Ostium Python SDK for interacting with the Ostium leveraged-trading
+    protocol (currencies, commodities, indices, crypto and more). Author ami@ostium.io.

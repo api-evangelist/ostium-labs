@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+probe: true
+url: https://docs.ostium.com/protocol/security/audits
+type: smart-contract-audit-program
+certifications: []
+audits:
+- firm: Zellic
+  engagements: [February 2024, November 2025]
+  scope: Trading, vault, and liquidation contracts
+  finding: No critical vulnerabilities identified in either engagement.
+- firm: ThreeSigma
+  engagements: ['2024-02-19 to 2024-03-22']
+  scope: Trading contracts, OLP vault mechanics, fee calculations
+  finding: No critical or high-severity vulnerabilities.
+- firm: Pashov Audit Group
+  engagements: [January 2025, April 2025, January 2026]
+  scope: 13 core contracts post-Jump Liquidity Upgrade
+  finding: All three reviews confirmed no critical vulnerabilities.
+bug_bounty: https://immunefi.com/bug-bounty/ostium/
+notes: >-
+  Ostium's trust posture is a published independent smart-contract audit program
+  plus an Immunefi bug bounty. It does not publish enterprise compliance
+  certifications (SOC 2 / ISO 27001 / PCI DSS), so no named certifications are listed.

@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.ostium.com/developer/sdk/errors
+envelope: >-
+  Errors are thrown as typed SDK error classes carrying a machine-readable code.
+  OstiumError covers client creation, transactions, signing, submission and contract
+  interactions; OstiumSubgraphError covers read methods over the subgraph / Builder API.
+error_classes:
+- name: OstiumError
+  scope: client creation, transactions, signing, submission, contract interactions
+  codes:
+  - code: INVALID_CONFIG
+    meaning: The client was created with incompatible or missing configuration for the selected mode.
+  - code: VALIDATION_FAILED
+    meaning: Input parameters failed SDK validation before submission.
+  - code: ALLOWANCE_INSUFFICIENT
+    meaning: The trader does not have enough USDC allowance for the requested action.
+    remediation: Call approveUsdc / check checkUsdcAllowance before submitting.
+  - code: SUBMISSION_FAILED
+    meaning: Transaction or user operation submission failed.
+  - code: DELEGATION_FAILED
+    meaning: Delegation setup is missing or the requested delegated action is not allowed in the current mode.
+  - code: CONTRACT_ERROR
+    meaning: A contract read or write failed.
+  - code: NETWORK_ERROR
+    meaning: An RPC or network request failed.
+- name: OstiumSubgraphError
+  scope: read methods using the subgraph or Builder API
+  codes:
+  - code: INVALID_CONFIG
+    meaning: The read client was created with invalid endpoint or mode configuration.
+  - code: INVALID_PARAMS
+    meaning: The read method was called with invalid arguments.
+  - code: FETCH_FAILED
+    meaning: The subgraph or Builder API request failed.
+  - code: NOT_FOUND
+    meaning: A requested entity or pair could not be found.
+  - code: PARSE_ERROR
+    meaning: The SDK received data but could not parse it into the expected shape.

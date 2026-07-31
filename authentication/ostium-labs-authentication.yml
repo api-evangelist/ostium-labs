@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.ostium.com/developer/client-modes/overview
+summary:
+  types: [wallet-signature, delegated-key, public-read]
+  api_key_in: []
+  oauth2_flows: []
+  notes: >-
+    Ostium is a self-custodial DeFi protocol; there is no server-side API key or
+    OAuth. Authentication and authorization happen at the wallet / smart-contract
+    layer. The public Builder API read endpoints (prices, OHLC, subgraph, price
+    stream) require no credentials.
+schemes:
+- name: trader-wallet-signature
+  type: wallet-signature
+  description: >-
+    Trader-owned positions signed directly by the trader's EOA (self + self / self +
+    gasless modes). The connected trader address authorizes on-chain actions via
+    wallet signatures; Safe-based gasless modes submit sponsored user operations.
+  modes: [self-and-self, self-and-gasless]
+- name: delegate-key
+  type: delegated-key
+  description: >-
+    Backend-controlled delegated execution. A delegate address/EOA registered via
+    setDelegate signs and (optionally) pays gas on behalf of a trader. The delegate
+    private key is generated/exported from the Ostium app.
+  modes: [delegated-and-self, delegated-and-gasless]
+  setup_operations: [setDelegate, removeDelegate, setupGaslessDelegation]
+- name: public-read
+  type: none
+  description: >-
+    Read-only market and account data (createReadOnly mode) and the public Builder
+    API endpoints require no authentication.
+  modes: [read-only]

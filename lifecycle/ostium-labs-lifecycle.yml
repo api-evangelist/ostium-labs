@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.ostium.com/developer/sdk/changelog
+versioning:
+  scheme: semver
+  subject: "@ostium/builder-sdk"
+  current: 0.5.0
+  docs: https://docs.ostium.com/developer/sdk/changelog
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation/Sunset-header policy is published for the Builder API/SDK.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  Ostium tracks changes through the dated SDK changelog. No public status page,
+  SLA document, or formal deprecation policy was found at the time of this pass.

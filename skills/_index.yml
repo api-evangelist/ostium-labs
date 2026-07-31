@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: generated
+source: https://docs.ostium.com/developer/reference (@ostium/builder-sdk operation surface)
+skills:
+- file: ostium-labs-open-leveraged-trade.md
+  name: Open a leveraged trade on Ostium
+  api: https://docs.ostium.com/developer/sdk/overview
+  operations: [checkUsdcAllowance, approveUsdc, getPairs, getAllPrices, openTrade, getOpenOrders, getOpenPositions]
+- file: ostium-labs-manage-and-close-position.md
+  name: Manage and close an Ostium position
+  api: https://docs.ostium.com/developer/sdk/overview
+  operations: [getOpenPositions, modifyOrder, updateCollateral, closeTrade, cancelOrder, getFills]
+- file: ostium-labs-read-and-stream-market-data.md
+  name: Read and stream Ostium market data
+  api: https://docs.ostium.com/developer/sdk/overview
+  operations: [getPairs, getAllPrices, getCandles, getSimOrderbook, getSimSlippage, streamPrices]
