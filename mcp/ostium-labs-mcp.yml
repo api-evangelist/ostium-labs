@@ -6,11 +6,10 @@ server:
   name: ostium
   transport: http
   url: null
-notes: >-
-  No official hosted/remote Ostium MCP server was found. The tool list below is a
-  candidate derived from the documented @ostium/builder-sdk read/write operation
-  surface, suitable for building a first MCP wrapper. Write tools act on-chain and
-  require a write-enabled client mode (trader signature or delegate key).
+notes: No official hosted/remote Ostium MCP server was found. The tool list below is a candidate derived
+  from the documented @ostium/builder-sdk read/write operation surface, suitable for building a first
+  MCP wrapper. Write tools act on-chain and require a write-enabled client mode (trader signature or delegate
+  key).
 tools:
 - name: get_pairs
   description: Fetch all Ostium pairs, leverage limits, live prices and market-state fields.
@@ -57,3 +56,9 @@ tools:
 - name: update_collateral
   description: Add or remove collateral from a position (write mode required).
   source_operation: updateCollateral
+deployment:
+  mode: none
+  verified: derived
+  tools: 15
+  checked: '2026-08-12'
+  source: catalog MCP census
