@@ -64,6 +64,120 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Ostium Labs is a company surfaced as a portfolio company of general-catalyst and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Ostium is a decentralized perpetual-futures exchange that lets traders access global real-world-asset markets — stocks, ETFs, commodities, indices, forex and crypto — directly from a self-custodial crypto wallet, with leverage and no broker or intermediary. Built on Arbitrum, the protocol pairs an on-chain OLP vault with an off-chain hedge that settle daily across three core participants. For developers, Ostium ships an official TypeScript Builder SDK (@ostium/builder-sdk) and a Python SDK (ostium-python-sdk) plus a public Builder API for live prices, OHLC candles and WebSocket price/account streaming, backed by a GraphQL subgraph. Client modes span read-only, trader-signed, and backend-controlled delegated / Safe-based gasless execution, with a testnet on Arbitrum Sepolia.
 
-Backed by: general-catalyst
+**Areas:** Company · Perpetual Futures · Decentralized Finance · DeFi · Trading · Real World Assets · Derivatives · Arbitrum · Blockchain · Web3 · Market Data · SDK
+
+## Ostium Labs on APIs.io
+
+Everything profiled for Ostium Labs is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ostium-labs/](https://apis.io/providers/ostium-labs/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Ostium Builder API](https://apis.io/apis/ostium-labs/ostium-builder-api/) — Public Builder API and TypeScript/Python SDK surface for reading Ostium market data (pairs, prices, OHLC candles), streaming live prices and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Ostium Builder API — Streaming](https://apis.io/asyncapis/ostium-labs/ostium-labs-prices-asyncapi/)
+
+#### Event channels (3)
+
+Individual events and webhooks the provider emits.
+
+- [streamAccountUpdates](https://apis.io/channels/ostium-labs/streamaccountupdates/)
+- [streamPositionUpdates](https://apis.io/channels/ostium-labs/streampositionupdates/)
+- [/v1/prices/stream](https://apis.io/channels/ostium-labs/v1-prices-stream/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [ostium](https://apis.io/servers/ostium-labs/ostium/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Ostium Labs Authentication](https://apis.io/security/ostium-labs/ostium-labs-authentication/)
+- [Ostium Labs Domain Security](https://apis.io/security/ostium-labs/ostium-labs-domain-security/)
+- [Ostium Labs Trust Center](https://apis.io/security/ostium-labs/ostium-labs-trust-center/)
+- [Ostium Labs Vulnerability Disclosure](https://apis.io/security/ostium-labs/ostium-labs-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.ostium.com)
+- [Documentation](https://docs.ostium.com)
+- [Getting started](https://docs.ostium.com/developer/traders/approvals-and-first-trade)
+- [API reference](https://docs.ostium.com/developer/builder-api/overview)
+- [Pricing](https://docs.ostium.com/traders/reference/fees)
+- [Sign up](https://app.ostium.com)
+- [Support](https://docs.ostium.com/traders/community/support)
+- [Changelog](https://docs.ostium.com/developer/sdk/changelog)
+- [Blog](https://www.ostium.com/blog)
+- [Security](https://immunefi.com/bug-bounty/ostium/)
+- [Terms of service](https://docs.ostium.com/legal/terms-of-use)
+- [Privacy policy](https://docs.ostium.com/legal/privacy-policy)
+- [GitHub](https://github.com/0xOstium)
+
+## API Evangelist rating
+
+**Kin Score 48.6** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.6 |
+| Contract governance | 4.5 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 73.2 |
+| Access clarity | 52.6 |
+
+**Agent readiness 20.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 33.3** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ostium-labs/](https://apis.io/providers/ostium-labs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Ostium Labs: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ostium-labs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
